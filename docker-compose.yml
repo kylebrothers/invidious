@@ -26,10 +26,10 @@ services:
           host: invidious-db
           port: 5432
         check_tables: true
-        # external_port: 3000
-        # domain: 192.168.0.134
-        # https_only: false
-        # statistics_enabled: false
+        external_port: 3000
+        domain: 192.168.0.134
+        https_only: false
+        statistics_enabled: false
     healthcheck:
       test: wget -nv --tries=1 --spider http://127.0.0.1:3000/api/v1/comments/jNQXAC9IVRw || exit 1
       interval: 30s
